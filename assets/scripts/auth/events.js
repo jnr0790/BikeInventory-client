@@ -40,8 +40,28 @@ const onSignOut = function (event) {
     .catch(ui.onError)
 }
 
+const onChangeForm = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const data = getFormFields(form)
+
+  api.changeForm(data)
+    .then(ui.onChangeFormSuccess)
+    .catch(ui.onError)
+}
+
+const onChangeBtn = function (event) {
+  event.preventDefault()
+
+  $('#change-pw-btn').hide()
+  $('#change-pw-form').show()
+}
+
 module.exports = {
   onSignUp,
   onSignIn,
-  onSignOut
+  onSignOut,
+  onChangeForm,
+  onChangeBtn
 }

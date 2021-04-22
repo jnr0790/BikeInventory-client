@@ -7,7 +7,11 @@ const authEvents = require('./auth/events')
 // require('./example')
 
 $(() => {
+  $('#change-pw-form').hide()
+
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-out').on('click', authEvents.onSignOut)
+  $('#change-pw-form').on('submit', authEvents.onChangeForm)
+  $('#change-pw-btn').on('click', authEvents.onChangeBtn)
 })

@@ -43,9 +43,26 @@ const onSignOutSuccess = function (response) {
   $('form').trigger('reset')
 }
 
+const onChangeFormSuccess = function (response) {
+  $('#message').text('You sucessfully changed your password!')
+  setTimeout(() => {
+    $('#message').text('')
+    $('#message').removeClass('success')
+  }, 2000)
+  $('form').trigger('reset')
+  $('#change-pw-form').hide()
+  $('#change-pw-btn').show()
+}
+
+const onChangeBtnSuccess = function () {
+
+}
+
 module.exports = {
   onError,
   onSignUpSuccess,
   onSignInSuccess,
-  onSignOutSuccess
+  onSignOutSuccess,
+  onChangeFormSuccess,
+  onChangeBtnSuccess
 }
