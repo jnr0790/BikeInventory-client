@@ -1,9 +1,7 @@
 // require store
 const store = require('./../store')
 
-// onError function for message when form doesn't go through properly
 const onError = function (err) {
-  // log any errors that occur
   console.error(err)
 
   $('#message').text('Something went wrong, please try again.')
@@ -35,8 +33,19 @@ const onSignInSuccess = function (response) {
   $('form').trigger('reset')
 }
 
+const onSignOutSuccess = function (response) {
+  store.user = null
+  $('#message').text('You signed out!')
+  setTimeout(() => {
+    $('#message').text('')
+    $('#message').removeClass('success')
+  }, 2000)
+  $('form').trigger('reset')
+}
+
 module.exports = {
   onError,
   onSignUpSuccess,
-  onSignInSuccess
+  onSignInSuccess,
+  onSignOutSuccess
 }
