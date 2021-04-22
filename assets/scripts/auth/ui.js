@@ -7,7 +7,6 @@ const onError = function (err) {
   $('#message').text('Something went wrong, please try again.')
   setTimeout(() => {
     $('#message').text('')
-    $('#message').removeClass('failure')
   }, 2000)
   $('form').trigger('reset')
 }
@@ -16,7 +15,6 @@ const onSignUpSuccess = function () {
   $('#message').text('Account was successfully created!')
   setTimeout(() => {
     $('#message').text('')
-    $('#message').removeClass('success')
   }, 2000)
   $('form').trigger('reset')
   $('#sign-up').hide()
@@ -30,7 +28,6 @@ const onSignInSuccess = function (response) {
   $('#message').text(`${email} is signed in!`)
   setTimeout(() => {
     $('#message').text('')
-    $('#message').removeClass('success')
   }, 2000)
   $('form').trigger('reset')
   $('#change-pw-btn').show()
@@ -47,7 +44,6 @@ const onSignOutSuccess = function (response) {
   $('#message').text('You signed out!')
   setTimeout(() => {
     $('#message').text('')
-    $('#message').removeClass('success')
   }, 2000)
   $('form').trigger('reset')
   $('form').trigger('reset')
