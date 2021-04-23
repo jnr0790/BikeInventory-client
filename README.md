@@ -2,8 +2,8 @@
 This application allows users to make lists for keeping bike inventory.
 
 ## Important links
-[Bike Inventory]()
-[Bike Inventory API](https://github.com/jnr0790/Bike-Inventory)
+- [Bike Inventory](https://jnr0790.github.io/BikeInventory-client/)
+- [Bike Inventory API](https://github.com/jnr0790/Bike-Inventory)
 
 ### User Stories
 - As a user I want to sign in/up
