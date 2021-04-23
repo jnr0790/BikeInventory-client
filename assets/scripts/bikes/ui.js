@@ -16,12 +16,14 @@ const onShowAllBikesSuccess = function (responseData) {
   bikes.forEach(bike => {
     bikesHtml += `
     <div id='bike-cont'>
-    <p>Brand: ${bike.brand}</p>
-    <p>Model: ${bike.model}</p>
-    <p>Type: ${bike.type}</p>
-    <p>Color: ${bike.color}</p>
-    <p>ID: ${bike._id}</p>
-    </div>`
+      <p>Brand: ${bike.brand}</p>
+      <p>Model: ${bike.model}</p>
+      <p>Type: ${bike.type}</p>
+      <p>Color: ${bike.color}</p>
+      <p>ID: ${bike._id}</p>
+      <button class='bike-delete' data-id=${bike._id}>Delete</button>
+    </div>
+    `
   })
   $('#bikes-display').html(bikesHtml)
 }
@@ -39,13 +41,23 @@ const onSingleBikeSuccess = function (responseData) {
 
   const bikeHtml = `
     <div id='bike-cont'>
-    <p>Brand: ${bike.brand}</p>
-    <p>Model: ${bike.model}</p>
-    <p>Type: ${bike.type}</p>
-    <p>Color: ${bike.color}</p>
-    </div>`
+      <p>Brand: ${bike.brand}</p>
+      <p>Model: ${bike.model}</p>
+      <p>Type: ${bike.type}</p>
+      <p>Color: ${bike.color}</p>
+      <button class='bike-delete' data-id=${bike._id}>Delete</button>
+    </div>
+    `
 
   $('#bikes-display').html(bikeHtml)
+  $('form').trigger('reset')
+}
+
+const onDelBikeSuccess = function (responseData) {
+  $('#bike-msg').text('Bike successfully deleted')
+  setTimeout(() => {
+    $('#bike-msg').text('')
+  }, 2000)
   $('form').trigger('reset')
 }
 
@@ -53,5 +65,6 @@ module.exports = {
   onError,
   onShowAllBikesSuccess,
   onAddBikeSuccess,
-  onSingleBikeSuccess
+  onSingleBikeSuccess,
+  onDelBikeSuccess
 }

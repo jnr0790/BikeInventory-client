@@ -32,8 +32,19 @@ const singleBike = function (id) {
   })
 }
 
+const delBike = function (id) {
+  return $.ajax({
+    method: 'DELETE',
+    url: `${config.apiUrl}/bikes/${id}`,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   showAll,
   addBike,
-  singleBike
+  singleBike,
+  delBike
 }

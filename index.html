@@ -56,8 +56,13 @@
         <div id='bike-btn-cont'>
           <button id='all-bikes' class='btn'>All Bikes</button>
 
-          <button id='add-bike-btn'class='btn'>Add Bike</button>
+          <button id='add-bike-btn' class='btn'>Add Bike</button>
         </div>
+
+        <form id='show-bike'>
+          <input name='bike[id]' type='text' placeholder='Search for bike by ID' required>
+          <button>Search</button>
+        </form>
 
         <form id='add-bike'>
           <h4>Add Bike</h4>
@@ -67,11 +72,6 @@
           <input name='bike[color]' type='text' placeholder='Enter Color Here' required>
           <button class='btn'>Add Bike</button>
           <button id='add-bike-cncl' class='btn'>Cancel</button>
-        </form>
-
-        <form id='show-bike'>
-          <input name='bike[id]' type='text' placeholder='Search for Bike by ID' required>
-          <button>Search</button>
         </form>
 
         <div id='bike-msg-cont'>

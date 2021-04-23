@@ -45,10 +45,21 @@ const onSingleBike = function (event) {
     .catch(ui.onError)
 }
 
+const onDelBike = function (event) {
+  event.preventDefault()
+
+  const id = $(event.target).data('id')
+
+  api.delBike(id)
+    .then(ui.onDelBikeSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
   onAllBikes,
   onAddBike,
   onAddBtn,
   onAddCncl,
-  onSingleBike
+  onSingleBike,
+  onDelBike
 }
