@@ -21,3 +21,17 @@ h1 {
   margin: 0 auto;
   position: absolute;
 }
+
+#bikes-display {
+  display: flex;
+  flex-wrap: wrap;
+  max-width: 700px;
+  margin: 0 auto;
+  #bike-cont{
+    border: 1px solid black;
+    margin: 10px auto;
+    min-width: 250px;
+    padding: 20px;
+
+  }
+}
