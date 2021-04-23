@@ -33,7 +33,6 @@
           <input type='email' name='credentials[email]' placeholder='Enter Email' required>
           <input type='password' name='credentials[password]' placeholder='Enter Password' required>            <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' required>
           <button class='btn'>Sign Up</button>
-          <!-- <button id='sign-up-cncl' class='btn'>Cancel</button> -->
         </form>
 
 
@@ -42,7 +41,6 @@
           <input type='email' name='credentials[email]' placeholder='Enter Email' required>
           <input type='password' name='credentials[password]' placeholder='Enter Password' required>
           <button class='btn'>Sign In</button>
-          <!-- <button id='sign-in-cncl' class='btn'>Cancel</button> -->
         </form>
 
 
@@ -56,11 +54,9 @@
         </form>
 
         <div id='bike-btn-cont'>
-          <button id='add-bike-btn'class='btn'>Add Bike</button>
-        </div>
+          <button id='all-bikes' class='btn'>All Bikes</button>
 
-        <div id='bike-msg-cont'>
-          <div id='bike-msg'></div>
+          <button id='add-bike-btn'class='btn'>Add Bike</button>
         </div>
 
         <form id='add-bike'>
@@ -72,6 +68,12 @@
           <button class='btn'>Add Bike</button>
           <button id='add-bike-cncl' class='btn'>Cancel</button>
         </form>
+
+        <div id='bike-msg-cont'>
+          <div id='bike-msg'></div>
+        </div>
+
+        <div id='bikes-display'></div>
 
 
     </main>

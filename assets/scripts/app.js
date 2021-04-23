@@ -11,6 +11,7 @@ $(() => {
   $('#sign-in').hide()
   $('#add-bike').hide()
   $('#add-bike-btn').hide()
+  $('#all-bikes').hide()
 
   // Auth events
   $('#sign-up').on('submit', authEvents.onSignUp)
@@ -23,6 +24,7 @@ $(() => {
   $('#change-pw-cncl').on('click', authEvents.onChangeCncl)
 
   // Bikes events
+  $('#all-bikes').on('click', bikeEvents.onAllBikes)
   $('#add-bike').on('submit', bikeEvents.onAddBike)
   $('#add-bike-btn').on('click', bikeEvents.onAddBtn)
   $('#add-bike-cncl').on('click', bikeEvents.onAddCncl)

@@ -2,6 +2,13 @@ const api = require('./api')
 const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
+const onAllBikes = function (event) {
+  event.preventDefault()
+  api.showAll()
+    .then(ui.onShowAllBikesSuccess)
+    .catch(ui.onError)
+}
+
 const onAddBike = function (event) {
   event.preventDefault()
 
@@ -28,6 +35,7 @@ const onAddCncl = function (event) {
 }
 
 module.exports = {
+  onAllBikes,
   onAddBike,
   onAddBtn,
   onAddCncl
