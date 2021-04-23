@@ -55,11 +55,42 @@ const onDelBike = function (event) {
     .catch(ui.onError)
 }
 
+const onUpdateBike = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+  const id = $(event.target).data('id')
+
+  api.updateBike(id, formData)
+    .then(ui.onUpdateBikeSuccess)
+    .catch(ui.onError)
+}
+
+const onUpdateBtn = function (event) {
+  event.preventDefault()
+
+  $('.update-bike').show()
+  $('.update-bike-btn').hide()
+  $('form').trigger('reset')
+}
+
+const onUpdateCncl = function (event) {
+  event.preventDefault()
+
+  $('.update-bike-btn').show()
+  $('.update-bike').hide()
+  $('form').trigger('reset')
+}
+
 module.exports = {
   onAllBikes,
   onAddBike,
   onAddBtn,
   onAddCncl,
   onSingleBike,
-  onDelBike
+  onDelBike,
+  onUpdateBike,
+  onUpdateBtn,
+  onUpdateCncl
 }

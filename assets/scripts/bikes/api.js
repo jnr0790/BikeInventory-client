@@ -42,9 +42,21 @@ const delBike = function (id) {
   })
 }
 
+const updateBike = function (id, formData) {
+  return $.ajax({
+    method: 'PATCH',
+    url: `${config.apiUrl}/bikes/${id}`,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    },
+    data: formData
+  })
+}
+
 module.exports = {
   showAll,
   addBike,
   singleBike,
-  delBike
+  delBike,
+  updateBike
 }
