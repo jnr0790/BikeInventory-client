@@ -11,7 +11,7 @@ const showAll = function () {
   })
 }
 
-const add = function (formData) {
+const addBike = function (formData) {
   return $.ajax({
     method: 'POST',
     url: `${config.apiUrl}/bikes/`,
@@ -22,7 +22,18 @@ const add = function (formData) {
   })
 }
 
+const singleBike = function (id) {
+  return $.ajax({
+    method: 'GET',
+    url: `${config.apiUrl}/bikes/${id}`,
+    headers: {
+      Authorization: `Bearer ${store.user.token}`
+    }
+  })
+}
+
 module.exports = {
   showAll,
-  add
+  addBike,
+  singleBike
 }

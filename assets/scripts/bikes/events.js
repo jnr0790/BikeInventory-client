@@ -15,7 +15,7 @@ const onAddBike = function (event) {
   const form = event.target
   const formData = getFormFields(form)
 
-  api.add(formData)
+  api.addBike(formData)
     .then(ui.onAddBikeSuccess)
     .catch(ui.onError)
 }
@@ -34,9 +34,21 @@ const onAddCncl = function (event) {
   $('form').trigger('reset')
 }
 
+const onSingleBike = function (event) {
+  event.preventDefault()
+
+  const form = event.target
+  const formData = getFormFields(form)
+
+  api.singleBike(formData.bike.id)
+    .then(ui.onSingleBikeSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
   onAllBikes,
   onAddBike,
   onAddBtn,
-  onAddCncl
+  onAddCncl,
+  onSingleBike
 }

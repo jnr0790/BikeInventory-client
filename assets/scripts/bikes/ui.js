@@ -16,10 +16,11 @@ const onShowAllBikesSuccess = function (responseData) {
   bikes.forEach(bike => {
     bikesHtml += `
     <div id='bike-cont'>
-    <h5>Brand: ${bike.brand}</h5>
-    <h5>Model: ${bike.model}</h5>
+    <p>Brand: ${bike.brand}</p>
+    <p>Model: ${bike.model}</p>
     <p>Type: ${bike.type}</p>
     <p>Color: ${bike.color}</p>
+    <p>ID: ${bike._id}</p>
     </div>`
   })
   $('#bikes-display').html(bikesHtml)
@@ -33,8 +34,24 @@ const onAddBikeSuccess = function () {
   $('form').trigger('reset')
 }
 
+const onSingleBikeSuccess = function (responseData) {
+  const bike = responseData.bike
+
+  const bikeHtml = `
+    <div id='bike-cont'>
+    <p>Brand: ${bike.brand}</p>
+    <p>Model: ${bike.model}</p>
+    <p>Type: ${bike.type}</p>
+    <p>Color: ${bike.color}</p>
+    </div>`
+
+  $('#bikes-display').html(bikeHtml)
+  $('form').trigger('reset')
+}
+
 module.exports = {
   onError,
   onShowAllBikesSuccess,
-  onAddBikeSuccess
+  onAddBikeSuccess,
+  onSingleBikeSuccess
 }
