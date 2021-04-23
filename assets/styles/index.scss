@@ -8,7 +8,7 @@ h1 {
   margin: 10px;
 }
 
-#message-cont {
+#message-cont, #bike-msg-cont {
   display: flex;
   justify-content: center;
   margin: 30px;
@@ -16,7 +16,7 @@ h1 {
   position: relative;
 }
 
-#message {
+#message, #bike-msg {
   text-align: center;
   margin: 0 auto;
   position: absolute;

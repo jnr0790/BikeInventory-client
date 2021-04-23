@@ -1,10 +1,7 @@
 'use strict'
-
-// use require with a reference to bundle the file and use it in this file
-// const example = require('./example')
 const authEvents = require('./auth/events')
-// use require without a reference to ensure a file is bundled
-// require('./example')
+
+const bikeEvents = require('./bikes/events')
 
 $(() => {
   $('#change-pw').hide()
@@ -12,7 +9,10 @@ $(() => {
   $('#sign-out').hide()
   $('#sign-up').hide()
   $('#sign-in').hide()
+  $('#add-bike').hide()
+  $('#add-bike-btn').hide()
 
+  // Auth events
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-up-btn').on('click', authEvents.onSignUpBtn)
   $('#sign-in').on('submit', authEvents.onSignIn)
@@ -21,4 +21,9 @@ $(() => {
   $('#change-pw').on('submit', authEvents.onChangeForm)
   $('#change-pw-btn').on('click', authEvents.onChangeBtn)
   $('#change-pw-cncl').on('click', authEvents.onChangeCncl)
+
+  // Bikes events
+  $('#add-bike').on('submit', bikeEvents.onAddBike)
+  $('#add-bike-btn').on('click', bikeEvents.onAddBtn)
+  $('#add-bike-cncl').on('click', bikeEvents.onAddCncl)
 })

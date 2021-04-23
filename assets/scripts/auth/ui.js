@@ -32,7 +32,7 @@ const onSignInSuccess = function (response) {
   $('form').trigger('reset')
   $('#change-pw-btn').show()
   $('#sign-out').show()
-  $('#play-game').show()
+  $('#add-bike-btn').show()
   $('#sign-in').hide()
   $('#sign-in-btn').hide()
   $('#sign-up').hide()
