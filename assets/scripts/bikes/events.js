@@ -18,8 +18,6 @@ const onAddBtn = function (event) {
 
   $('#add-bike').show()
   $('form').trigger('reset')
-
-    .catch(ui.onError)
 }
 
 const onAddCncl = function (event) {
@@ -27,7 +25,6 @@ const onAddCncl = function (event) {
 
   $('#add-bike').hide()
   $('form').trigger('reset')
-    .catch(ui.onError)
 }
 
 module.exports = {

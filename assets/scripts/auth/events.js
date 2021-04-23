@@ -26,7 +26,6 @@ const onSignUpBtn = function (event) {
   setTimeout(() => {
     $('#sign-up').hide()
   }, 10000)
-    .catch(ui.onError)
 }
 
 const onSignIn = function (event) {
@@ -48,7 +47,6 @@ const onSignInBtn = function (event) {
   setTimeout(() => {
     $('#sign-in').hide()
   }, 10000)
-    .catch(ui.onError)
 }
 
 const onSignOut = function (event) {
@@ -80,7 +78,6 @@ const onChangeBtn = function (event) {
   setTimeout(() => {
     $('#change-pw').hide()
   }, 10000)
-    .catch(ui.onError)
 }
 
 const onChangeCncl = function (event) {
@@ -88,7 +85,6 @@ const onChangeCncl = function (event) {
 
   $('#change-pw').hide()
   $('form').trigger('reset')
-    .catch(ui.onError)
 }
 
 module.exports = {
