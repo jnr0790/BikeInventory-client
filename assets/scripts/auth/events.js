@@ -23,9 +23,6 @@ const onSignUpBtn = function (event) {
 
   $('#sign-in').hide()
   $('#sign-up').show()
-  setTimeout(() => {
-    $('#sign-up').hide()
-  }, 10000)
 }
 
 const onSignIn = function (event) {
@@ -44,9 +41,6 @@ const onSignInBtn = function (event) {
 
   $('#sign-up').hide()
   $('#sign-in').show()
-  setTimeout(() => {
-    $('#sign-in').hide()
-  }, 10000)
 }
 
 const onSignOut = function (event) {
@@ -75,9 +69,6 @@ const onChangeBtn = function (event) {
   event.preventDefault()
 
   $('#change-pw').show()
-  setTimeout(() => {
-    $('#change-pw').hide()
-  }, 10000)
 }
 
 const onChangeCncl = function (event) {
