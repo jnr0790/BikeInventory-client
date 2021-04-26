@@ -16,29 +16,28 @@ const onShowAllBikesSuccess = function (responseData) {
   bikes.forEach(bike => {
     bikesHtml += `
     <div id='bike-cont'>
-      <p>Brand: ${bike.brand}</p>
-      <p>Model: ${bike.model}</p>
-      <p>Type: ${bike.type}</p>
-      <p>Color: ${bike.color}</p>
-      <p>ID: ${bike._id}</p>
+      <p><span>Brand:</span> ${bike.brand}</p>
+      <p><span>Model:</span> ${bike.model}</p>
+      <p><span>Type:</span> ${bike.type}</p>
+      <p><span>Color:</span> ${bike.color}</p>
+      <p><span>ID:</span> ${bike._id}</p>
 
-      <button class='update-bike-btn'>Update Bike</button>
+      <button class='update-bike-btn btn'>Update Bike</button>
       <form class='update-bike' data-id=${bike._id}>
-        <input name='bike[brand]' type='text' placeholder='Enter New Brand' data-id=${bike.brand}>
-        <input name='bike[model]' type='text' placeholder='Enter New Model' data-id=${bike.model}>
-        <input name='bike[type]' type='text' placeholder='Enter New Type' data-id=${bike.type}>
-        <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color}>
+        <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color} require>
         <button class='btn'>Update Bike</button>
-        <button class='update-bike-cncl' class='btn'>Cancel</button>
+        <button class='update-bike-cncl btn'>Cancel</button>
       </form>
 
-      <button class='delete-bike' data-id=${bike._id}>Delete</button>
+      <button class='delete-bike btn' data-id=${bike._id}>Delete</button>
 
     </div>
     `
   })
   $('#bikes-display').html(bikesHtml)
   $('.update-bike').hide()
+  $('#close').show()
+  $('#bikes-display').show()
 }
 
 const onAddBikeSuccess = function () {
@@ -54,28 +53,27 @@ const onSingleBikeSuccess = function (responseData) {
 
   const bikeHtml = `
     <div id='bike-cont'>
-      <p>Brand: ${bike.brand}</p>
-      <p>Model: ${bike.model}</p>
-      <p>Type: ${bike.type}</p>
-      <p>Color: ${bike.color}</p>
+      <p><span>Brand:</span> ${bike.brand}</p>
+      <p><span>Model:</span> ${bike.model}</p>
+      <p><span>Type:</span> ${bike.type}</p>
+      <p><span>Color:</span> ${bike.color}</p>
 
-      <button class='update-bike-btn'>Update Bike</button>
-      <form class='update-bike' data-id=${bike._id}>
-        <input name='bike[brand]' type='text' placeholder='Enter New Brand' data-id=${bike.brand}>
-        <input name='bike[model]' type='text' placeholder='Enter New Model' data-id=${bike.model}>
-        <input name='bike[type]' type='text' placeholder='Enter New Type' data-id=${bike.type}>
-        <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color}>
+      <button class='update-bike-btn btn'>Update Bike</button>
+      <form class='update-bike btn' data-id=${bike._id}>
+        <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color} require>
         <button class='btn'>Update Bike</button>
-        <button class='update-bike-cncl' class='btn'>Cancel</button>
+        <button class='update-bike-cncl btn'>Cancel</button>
       </form>
 
-      <button class='delete-bike' data-id=${bike._id}>Delete</button>
+      <button class='delete-bike btn' data-id=${bike._id}>Delete</button>
     </div>
     `
 
   $('#bikes-display').html(bikeHtml)
   $('.update-bike').hide()
   $('form').trigger('reset')
+  $('#close').show()
+  $('#bikes-display').show()
 }
 
 const onDelBikeSuccess = function (responseData) {

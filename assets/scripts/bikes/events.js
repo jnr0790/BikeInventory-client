@@ -83,6 +83,12 @@ const onUpdateCncl = function (event) {
   $('form').trigger('reset')
 }
 
+const onClose = function (event) {
+  event.preventDefault()
+  $('#bikes-display').hide()
+  $('#close').hide()
+}
+
 module.exports = {
   onAllBikes,
   onAddBike,
@@ -92,5 +98,6 @@ module.exports = {
   onDelBike,
   onUpdateBike,
   onUpdateBtn,
-  onUpdateCncl
+  onUpdateCncl,
+  onClose
 }

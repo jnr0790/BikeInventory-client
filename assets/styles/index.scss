@@ -1,11 +1,66 @@
 @import '~bootstrap/scss/bootstrap';
+@import url('https://fonts.googleapis.com/css2?family=Zen+Dots&display=swap');
 
 body {
+  font-family: Zen Dots;
+  background-color: #3e5c76;
   text-align: center;
-}
+  color: #f0ebd8;
 
+}
+header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #0d1321;
+  height: 64px;
+}
 h1 {
   margin: 10px;
+}
+ul {
+  display: flex;
+  list-style: none;
+  margin: 10px;
+  align-items: center;
+}
+#bike-nav li{
+  margin: 0px 30px;
+}
+li{
+  padding: 20px;
+}
+li:hover {
+  background-color: #1d2d44;
+  text-decoration: none;
+  cursor: pointer;
+}
+main form {
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  max-width: 500px;
+  margin-top: 50px;
+  input, button {
+    vertical-align: middle;
+    margin-top: 10px;
+    border-radius: 5px;
+    height: 30px;
+  }
+  button:hover {
+    text-decoration: none;
+    background-color: #1d2d44;
+    color: #f0ebd8;
+  }
+}
+.btn {
+  background-color: #0d1321;
+  color: #f0ebd8;
+}
+.btn:hover {
+  text-decoration: none;
+  background-color: #1d2d44;
+  color: #f0ebd8;
 }
 
 #message-cont, #bike-msg-cont {
@@ -28,10 +83,13 @@ h1 {
   max-width: 700px;
   margin: 0 auto;
   #bike-cont{
-    border: 1px solid black;
+    background-color: #748cab;
+    border: 1px solid #f0ebd8;
     margin: 10px auto;
     min-width: 700px;
     padding: 20px;
-
+    span {
+      font-weight: bold;
+    }
   }
 }

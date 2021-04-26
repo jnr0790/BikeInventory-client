@@ -60,6 +60,7 @@ const onSignOutSuccess = function (response) {
   $('#del-bike-btn').hide()
   $('#show-bike').hide()
   $('#bikes-msg').hide()
+  $('#close').hide()
   $('#bikes-display').empty()
   $('#sign-out').hide()
   $('#sign-in-btn').show()

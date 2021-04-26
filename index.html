@@ -14,14 +14,33 @@
     <body>
       <header>
         <h1>Bike Inventory</h1>
-        <button id='sign-in-btn' class='btn'>Sign In</button>
-
-        <button id='sign-up-btn' class='btn'>Sign Up</button>
-
-        <button id='change-pw-btn' class='btn'>Change Password</button>
-
-        <button id='sign-out' class='btn'>Sign Out</button>
-      </header>
+        <ul id='bike-nav'>
+          <li id='all-bikes'>
+            All Bikes
+          </li>
+            <form id='show-bike'>
+              <input name='bike[id]' type='text' placeholder='Search for bike by ID' required>
+              <button class='btn'>Search</button>
+            </form>
+          <li id='add-bike-btn'>
+            Add Bike
+          </li>
+        </ul>
+        <ul id ='auth-nav'>
+          <li id='sign-in-btn'>
+            Sign In
+          </li>
+          <li id='sign-up-btn'>
+            Sign Up
+          </li>
+          <li id='change-pw-btn'>
+            Change Password
+          </li>
+          <li id='sign-out'>
+            Sign Out
+          </li>
+      </ul>
+    </header>
       <main>
 
       <div id='message-cont'>
@@ -33,6 +52,7 @@
           <input type='email' name='credentials[email]' placeholder='Enter Email' required>
           <input type='password' name='credentials[password]' placeholder='Enter Password' required>            <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' required>
           <button class='btn'>Sign Up</button>
+          <button id='sign-up-cncl' class='btn'>Cancel</button>
         </form>
 
 
@@ -41,6 +61,7 @@
           <input type='email' name='credentials[email]' placeholder='Enter Email' required>
           <input type='password' name='credentials[password]' placeholder='Enter Password' required>
           <button class='btn'>Sign In</button>
+          <button id='sign-in-cncl' class='btn'>Cancel</button>
         </form>
 
 
@@ -51,17 +72,6 @@
           <input type='password' name='passwords[new]' placeholder='Enter New Password' required>
           <button class='btn'>Change Password</button>
           <button id='change-pw-cncl' class='btn'>Cancel</button>
-        </form>
-
-        <div id='bike-btn-cont'>
-          <button id='all-bikes' class='btn'>All Bikes</button>
-
-          <button id='add-bike-btn' class='btn'>Add Bike</button>
-        </div>
-
-        <form id='show-bike'>
-          <input name='bike[id]' type='text' placeholder='Search for bike by ID' required>
-          <button>Search</button>
         </form>
 
         <form id='add-bike'>
@@ -78,8 +88,8 @@
           <div id='bike-msg'></div>
         </div>
 
+        <button id='close' class='btn'>Close</button>
         <div id='bikes-display'></div>
-
 
     </main>
   </body>

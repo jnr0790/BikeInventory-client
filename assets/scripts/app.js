@@ -13,12 +13,15 @@ $(() => {
   $('#add-bike-btn').hide()
   $('#all-bikes').hide()
   $('#show-bike').hide()
+  $('#close').hide()
 
   // Auth events
   $('#sign-up').on('submit', authEvents.onSignUp)
   $('#sign-up-btn').on('click', authEvents.onSignUpBtn)
+  $('#sign-up-cncl').on('click', authEvents.onSignUpCncl)
   $('#sign-in').on('submit', authEvents.onSignIn)
   $('#sign-in-btn').on('click', authEvents.onSignInBtn)
+  $('#sign-in-cncl').on('click', authEvents.onSignInCncl)
   $('#sign-out').on('click', authEvents.onSignOut)
   $('#change-pw').on('submit', authEvents.onChangeForm)
   $('#change-pw-btn').on('click', authEvents.onChangeBtn)
@@ -34,4 +37,5 @@ $(() => {
   $('#bikes-display').on('submit', '.update-bike', bikeEvents.onUpdateBike)
   $('#bikes-display').on('click', '.update-bike-btn', bikeEvents.onUpdateBtn)
   $('#bikes-display').on('click', '.update-bike-cncl', bikeEvents.onUpdateCncl)
+  $('#close').on('click', bikeEvents.onClose)
 })

@@ -23,6 +23,14 @@ const onSignUpBtn = function (event) {
 
   $('#sign-in').hide()
   $('#sign-up').show()
+  $('form').trigger('reset')
+}
+
+const onSignUpCncl = function (event) {
+  event.preventDefault()
+
+  $('#sign-up').hide()
+  $('form').trigger('reset')
 }
 
 const onSignIn = function (event) {
@@ -41,6 +49,14 @@ const onSignInBtn = function (event) {
 
   $('#sign-up').hide()
   $('#sign-in').show()
+  $('form').trigger('reset')
+}
+
+const onSignInCncl = function (event) {
+  event.preventDefault()
+
+  $('#sign-in').hide()
+  $('form').trigger('reset')
 }
 
 const onSignOut = function (event) {
@@ -69,6 +85,7 @@ const onChangeBtn = function (event) {
   event.preventDefault()
 
   $('#change-pw').show()
+  $('form').trigger('reset')
 }
 
 const onChangeCncl = function (event) {
@@ -86,5 +103,7 @@ module.exports = {
   onChangeBtn,
   onChangeCncl,
   onSignUpBtn,
-  onSignInBtn
+  onSignUpCncl,
+  onSignInBtn,
+  onSignInCncl
 }
