@@ -34,6 +34,7 @@ $(() => {
   $('#add-bike-cncl').on('click', bikeEvents.onAddCncl)
   $('#show-bike').on('submit', bikeEvents.onSingleBike)
   $('#bikes-display').on('click', '.delete-bike', bikeEvents.onDelBike)
+  $('#bikes-display').on('click', '.view-bike', bikeEvents.onViewBike)
   $('#bikes-display').on('submit', '.update-bike', bikeEvents.onUpdateBike)
   $('#bikes-display').on('click', '.update-bike-btn', bikeEvents.onUpdateBtn)
   $('#bikes-display').on('click', '.update-bike-cncl', bikeEvents.onUpdateCncl)

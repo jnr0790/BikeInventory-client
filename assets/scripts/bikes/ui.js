@@ -22,12 +22,14 @@ const onShowAllBikesSuccess = function (responseData) {
       <p><span>Color:</span> ${bike.color}</p>
       <p><span>ID:</span> ${bike._id}</p>
 
-      <button class='update-bike-btn btn'>Update Bike</button>
       <form class='update-bike' data-id=${bike._id}>
-        <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color} require>
-        <button class='btn'>Update Bike</button>
-        <button class='update-bike-cncl btn'>Cancel</button>
+      <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color} require>
+      <button class='btn'>Update Bike</button>
+      <button class='update-bike-cncl btn'>Cancel</button>
       </form>
+
+      <button class='view-bike btn' data-id=${bike._id}>View</button>
+      <button class='update-bike-btn btn'>Update Bike</button>
 
       <button class='delete-bike btn' data-id=${bike._id}>Delete</button>
 
@@ -58,12 +60,13 @@ const onSingleBikeSuccess = function (responseData) {
       <p><span>Type:</span> ${bike.type}</p>
       <p><span>Color:</span> ${bike.color}</p>
 
-      <button class='update-bike-btn btn'>Update Bike</button>
-      <form class='update-bike btn' data-id=${bike._id}>
-        <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color} require>
-        <button class='btn'>Update Bike</button>
-        <button class='update-bike-cncl btn'>Cancel</button>
+      <form class='update-bike' data-id=${bike._id}>
+      <input name='bike[color]' type='text' placeholder='Enter New Color' data-id=${bike.color} require>
+      <button class='btn'>Update Bike</button>
+      <button class='update-bike-cncl btn'>Cancel</button>
       </form>
+
+      <button class='update-bike-btn btn'>Update Bike</button>
 
       <button class='delete-bike btn' data-id=${bike._id}>Delete</button>
     </div>

@@ -3,7 +3,6 @@ const ui = require('./ui')
 const getFormFields = require('../../../lib/get-form-fields')
 
 const onAllBikes = function (event) {
-  event.preventDefault()
   api.showAll()
     .then(ui.onShowAllBikesSuccess)
     .catch(ui.onError)
@@ -46,11 +45,10 @@ const onSingleBike = function (event) {
 }
 
 const onDelBike = function (event) {
-  event.preventDefault()
-
   const id = $(event.target).data('id')
 
   api.delBike(id)
+    .then(onAllBikes)
     .then(ui.onDelBikeSuccess)
     .catch(ui.onError)
 }
@@ -89,6 +87,16 @@ const onClose = function (event) {
   $('#close').hide()
 }
 
+const onViewBike = function (event) {
+  event.preventDefault()
+
+  const id = $(event.target).data('id')
+
+  api.singleBike(id)
+    .then(ui.onSingleBikeSuccess)
+    .catch(ui.onError)
+}
+
 module.exports = {
   onAllBikes,
   onAddBike,
@@ -99,5 +107,6 @@ module.exports = {
   onUpdateBike,
   onUpdateBtn,
   onUpdateCncl,
-  onClose
+  onClose,
+  onViewBike
 }
