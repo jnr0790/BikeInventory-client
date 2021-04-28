@@ -1,6 +1,4 @@
-const onError = function (err) {
-  console.error(err)
-
+const onError = function () {
   $('#bike-msg').text('Something went wrong, please try again.')
   setTimeout(() => {
     $('#bike-msg').text('')

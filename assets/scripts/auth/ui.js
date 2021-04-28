@@ -1,9 +1,7 @@
 // require store
 const store = require('./../store')
 
-const onError = function (err) {
-  console.error(err)
-
+const onError = function () {
   $('#message').text('Something went wrong, please try again.')
   setTimeout(() => {
     $('#message').text('')
