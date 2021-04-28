@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      <title>Bike Inventory</title>
+      <meta name="viewport" content="width=device-width, initial-scale=1">
+
+      <!-- Do not add `link` tags-->
+      <link rel="shortcut icon" type="image/x-icon" href="favicon.ico">
+
+      <!-- Do not add `script` tags-->
+      <script src="public/vendor.js" type="text/javascript" charset="utf-8" defer></script>
+      <script src="public/application.js" type="text/javascript" charset="utf-8" defer></script>
+    </head>
+    <body>
+      <header>
+        <h1>Bike Inventory</h1>
+        <ul id='bike-nav'>
+          <li id='all-bikes'>
+            All Bikes
+          </li>
+            <form id='show-bike'>
+              <input name='bike[id]' type='text' placeholder='Search for bike by ID' required>
+              <button class='btn'>Search</button>
+            </form>
+          <li id='add-bike-btn'>
+            Add Bike
+          </li>
+        </ul>
+        <ul id ='auth-nav'>
+          <li id='sign-in-btn'>
+            Sign In
+          </li>
+          <li id='sign-up-btn'>
+            Sign Up
+          </li>
+          <li id='change-pw-btn'>
+            Change Password
+          </li>
+          <li id='sign-out'>
+            Sign Out
+          </li>
+      </ul>
+    </header>
+      <main>
+
+      <div id='message-cont'>
+        <div id='message'></div>
+      </div>
+
+        <form id='sign-up'>
+          <h4>Sign Up</h4>
+          <input type='email' name='credentials[email]' placeholder='Enter Email' required>
+          <input type='password' name='credentials[password]' placeholder='Enter Password' required>            <input type='password' name='credentials[password_confirmation]' placeholder='Confirm Password' required>
+          <button class='btn'>Sign Up</button>
+          <button id='sign-up-cncl' class='btn'>Cancel</button>
+        </form>
+
+
+        <form id='sign-in'>
+          <h4>Sign In</h4>
+          <input type='email' name='credentials[email]' placeholder='Enter Email' required>
+          <input type='password' name='credentials[password]' placeholder='Enter Password' required>
+          <button class='btn'>Sign In</button>
+          <button id='sign-in-cncl' class='btn'>Cancel</button>
+        </form>
+
+
+
+        <form id='change-pw'>
+          <h4>Change Password</h4>
+          <input type='password' name='passwords[old]' placeholder='Enter Old Password' required>
+          <input type='password' name='passwords[new]' placeholder='Enter New Password' required>
+          <button class='btn'>Change Password</button>
+          <button id='change-pw-cncl' class='btn'>Cancel</button>
+        </form>
+
+        <form id='add-bike'>
+          <h4>Add Bike</h4>
+          <input name='bike[brand]' type='text' placeholder='Enter Brand Here' required>
+          <input name='bike[model]' type='text' placeholder='Enter Model Here' required>
+          <input name='bike[type]' type='text' placeholder='Enter Type Here' required>
+          <input name='bike[color]' type='text' placeholder='Enter Color Here' required>
+          <button class='btn'>Add Bike</button>
+          <button id='add-bike-cncl' class='btn'>Cancel</button>
+        </form>
+
+        <div id='bike-msg-cont'>
+          <div id='bike-msg'></div>
+        </div>
+
+        <button id='close' class='btn'>Close</button>
+        <div id='bikes-display'></div>
+
+    </main>
+  </body>
+</html>
